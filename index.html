@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .sun {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background: yellow;
+            box-shadow: 0 0 30px #fff;
+            border-radius: 50%;
+        }
+
+        .axis1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-right: 2px solid #fff;
+            border-radius: 50%;
+            animation: anime-1 5s linear infinite;
+        }
+
+        @keyframes anime-1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .axis1 .earth {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-color: steelblue;
+            left: 180px;
+            top: 370px;
+            border-radius: 50%;
+        }
+
+        .axis2 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-right: 2px solid #fff;
+            top: 350px;
+            left: 160px;
+            animation: anime-1 5s linear infinite;
+            border-radius: 50%;
+        }
+
+        .axis2 .moon {
+            position: absolute;
+            height: 20px;
+            top: 85px;
+            left: 50px;
+            width: 20px;
+            background: #fff;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="axis1">
+        <div class="earth"></div>
+        <div class="axis2">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>
